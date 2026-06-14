@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse — Uptime monitoring that never blinks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="logo-text">Pulse</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn btn-ghost">Log in</a>
+        <a href="#pricing" class="btn btn-primary">Start free</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> All systems operational</p>
+          <h1>Know the moment<br> something <span class="accent">breaks.</span></h1>
+          <p class="hero-sub">
+            Pulse checks every endpoint you care about from 12 regions, every 30 seconds,
+            and pages the right person before your customers notice a thing.
+          </p>
+          <div class="hero-actions">
+            <a href="#pricing" class="btn btn-primary btn-lg">Start monitoring free</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+          </div>
+          <p class="hero-meta">No credit card required &nbsp;·&nbsp; 5 monitors free forever</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="pulse-card">
+            <div class="pulse-card-head">
+              <span class="pulse-card-title">api.yourapp.com</span>
+              <span class="pulse-badge">200 OK · 118ms</span>
+            </div>
+            <svg class="pulse-wave" viewBox="0 0 520 160" preserveAspectRatio="none">
+              <path class="wave-grid" d="M0 80 H520 M0 40 H520 M0 120 H520" />
+              <path id="wavePath" class="wave-line"
+                d="M0,80 L60,80 L75,80 L90,20 L105,140 L120,80 L160,80 L320,80 L335,80 L350,20 L365,140 L380,80 L520,80" />
+              <circle class="wave-dot" r="5">
+                <animateMotion dur="3.2s" repeatCount="indefinite" rotate="auto"
+                  path="M0,80 L60,80 L75,80 L90,20 L105,140 L120,80 L160,80 L320,80 L335,80 L350,20 L365,140 L380,80 L520,80" />
+              </circle>
+            </svg>
+            <div class="pulse-card-foot">
+              <div class="metric">
+                <span class="metric-value">99.99<small>%</small></span>
+                <span class="metric-label">uptime / 90d</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">114<small>ms</small></span>
+                <span class="metric-label">avg response</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">0</span>
+                <span class="metric-label">open incidents</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Logos / trust strip ===== -->
+    <section class="trust-strip">
+      <div class="container">
+        <p class="trust-label">Trusted by teams keeping critical services online</p>
+        <div class="trust-logos">
+          <span>NORTHWIND</span>
+          <span>ORBITAL</span>
+          <span>FERROUS</span>
+          <span>CASCADE&nbsp;CO</span>
+          <span>HALCYON</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Features ===== -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-static">Features</p>
+          <h2>Everything you need to catch the 3am outage</h2>
+          <p class="section-sub">A focused toolkit for teams who'd rather hear about a problem from Pulse than from a customer.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 1.5V4M12 20V22.5M1.5 12H4M20 12H22.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Global checks</h3>
+            <p>Every monitor runs from 12 regions worldwide, so a single bad network path never causes a false alarm.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 4 4 7 9 9 5-2 9-5 9-9V7l-9-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Instant alerts</h3>
+            <p>SMS, phone calls, Slack, and email — escalated automatically until someone actually acknowledges it.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M8 4v0M16 4v0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M7 13h4M7 16h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Public status pages</h3>
+            <p>A clean, branded status page your customers can check themselves — fewer "is it down?" emails.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M4 19V9l4-4 4 6 4-3 4 5v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Performance history</h3>
+            <p>Every response time, every check, kept for a year — so you can spot slow creep before it becomes an outage.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 12l3-3 4 4 5-7 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="15" r="1.4" fill="currentColor"/></svg>
+            </div>
+            <h3>Automatic incident timeline</h3>
+            <p>Pulse drafts the postmortem timeline for you — when it started, who was paged, when it recovered.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Integrations</h3>
+            <p>Connect Slack, PagerDuty, Discord, Webhooks, and 20+ tools your team already lives in.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section class="how" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-static">How it works</p>
+          <h2>From sign-up to your first alert in under two minutes</h2>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-step">
+            <span class="how-index">01</span>
+            <h3>Add your endpoint</h3>
+            <p>Paste a URL, API endpoint, or port. Pulse starts checking it immediately from every region.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-index">02</span>
+            <h3>Set your thresholds</h3>
+            <p>Decide what "down" means for you — response time, status code, or a custom keyword check.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-index">03</span>
+            <h3>Get paged when it matters</h3>
+            <p>On-call rotations, escalation policies, and quiet hours so the right person hears about it first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Stats ===== -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-value">30<small>s</small></span>
+          <span class="stat-label">check interval</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">12</span>
+          <span class="stat-label">monitoring regions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">&lt;60<small>s</small></span>
+          <span class="stat-label">average alert time</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">99.99<small>%</small></span>
+          <span class="stat-label">Pulse's own uptime</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-static">Pricing</p>
+          <h2>Simple plans that scale with your stack</h2>
+          <p class="section-sub">Start free. Upgrade only when you have more to watch.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="price"><span>$0</span>/mo</p>
+            <p class="price-desc">For side projects and personal sites.</p>
+            <ul class="price-features">
+              <li>5 monitors</li>
+              <li>5-minute checks</li>
+              <li>Email alerts</li>
+              <li>3 regions</li>
+            </ul>
+            <a href="#" class="btn btn-outline btn-block">Get started</a>
+          </article>
+
+          <article class="price-card price-card-featured">
+            <p class="price-tag">Most popular</p>
+            <h3>Team</h3>
+            <p class="price"><span>$24</span>/mo</p>
+            <p class="price-desc">For startups and growing products.</p>
+            <ul class="price-features">
+              <li>50 monitors</li>
+              <li>30-second checks</li>
+              <li>SMS, Slack, phone calls</li>
+              <li>12 regions</li>
+              <li>Public status page</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Start free trial</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Scale</h3>
+            <p class="price"><span>$89</span>/mo</p>
+            <p class="price-desc">For platforms with critical SLAs.</p>
+            <ul class="price-features">
+              <li>Unlimited monitors</li>
+              <li>15-second checks</li>
+              <li>On-call rotations</li>
+              <li>All regions</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#" class="btn btn-outline btn-block">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-static">FAQ</p>
+          <h2>Good to know</h2>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>How fast will I know if something goes down?</summary>
+            <p>Most outages are detected and alerted on within 60 seconds, thanks to checks from multiple regions confirming the failure before paging you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I monitor things that aren't websites?</summary>
+            <p>Yes — Pulse supports HTTP(S), TCP ports, ping, DNS records, SSL certificate expiry, and keyword checks on page content.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer a free plan?</summary>
+            <p>Yes. The Starter plan is free forever and includes 5 monitors with 5-minute checks — plenty for personal projects.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can my customers see our status page?</summary>
+            <p>Every Team and Scale plan includes a branded public status page you can host on your own subdomain.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Stop finding out about outages from your customers.</h2>
+        <p>Set up your first monitor in under two minutes. No credit card required.</p>
+        <a href="#pricing" class="btn btn-primary btn-lg">Start monitoring free</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="logo-text">Pulse</span>
+        </a>
+        <p>Uptime monitoring that never blinks.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#">Status page</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Documentation</a>
+        <a href="#">API reference</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Support</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Pulse. All systems operational.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Twitter / X">𝕏</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
